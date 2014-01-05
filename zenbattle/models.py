@@ -8,6 +8,7 @@ from sqlalchemy import (
     Float,
     DateTime,
     Boolean,
+    Enum,
     )
 
 from sqlalchemy.ext.declarative import declarative_base
@@ -49,17 +50,21 @@ class Game(Base):
     start_time = Column(DateTime)
     run_time = Column(DateTime)
     player_id = Column(Integer)
+    player2_id = Column(Integer)
     player1_score = Column(Float)
     player2_score = Column(Float)
     purse = Column(Integer)
-    status = Column(Boolean)
+    status = Column(Enum("created", "started", "finished", name='game_status'))
 
-    def __init__(self, player_id, purse):
+    def __init__(self, player_id, player2_id, purse):
         import datetime
         self.start_time = datetime.datetime.now()
         self.player_id = player_id
+        self.player2_id = player2_id
+        self.player1_score = 0
+        self.player2_score = 0
         self.purse = purse
-        self.status = True
+        self.status = "created"
 
 
 class GameData(Base):
@@ -89,10 +94,11 @@ class AppRoot(object):
 
     def __init__(self, request):
         ''' initialize the root with a user object '''
-        from zenbattle.factories.base import (UserFactory, SessionFactory, GameFactory)
+        from zenbattle.factories.base import (UserFactory, SessionFactory, GameFactory, GameDataFactory)
         self.request = request
         self.dict = {}
-        self.dict['zen'] = {'user': UserFactory(), 'session': SessionFactory(), 'game': GameFactory()}
+        self.dict['zen'] = {'user': UserFactory(), 'session': SessionFactory(), 'game': GameFactory(),
+                            'gamedata': GameDataFactory()}
     def __getitem__(self, key):
         LOGGER.debug("AppRoot.__getitem__ called with key %s" % key)
         #item = self.dict[key]

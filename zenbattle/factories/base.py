@@ -239,14 +239,32 @@ class GameFactory(BaseFactory):
     def __init__(self):
         BaseFactory.__init__(self, Game)
 
-    def create(self, player_id, wager):
-        game = self.type(player_id, wager)
+    def create(self, player_id, player2, wager):
+        game = self.type(player_id, player2, wager)
+        active = self.get_active(player_id)
+        if active is not None:
+            active.status = "finished"
+            self.update(active)
         return self.add(game)
 
     def get_active(self, player_id):
         filters = [
             self.type.player_id == player_id,
-            self.type.status == True,
+            self.type.status == "started",
+        ]
+        result = self.get_query(filters=filters).scalar()
+        if result is None:
+            filters = [
+                self.type.player2_id == player_id,
+                self.type.status == "started",
+            ]
+            result = self.get_query(filters=filters).scalar()
+        return result
+
+    def get_created(self, player_id):
+        filters = [
+            self.type.player_id == player_id,
+            self.type.status == "created",
         ]
         return self.get_query(filters=filters).scalar()
 
@@ -259,3 +277,7 @@ class GameDataFactory(BaseFactory):
     def create(self, game_id, user_id, attention, meditation):
         data = self.type(game_id, user_id, attention, meditation)
         return self.add(data)
+
+    def count(self, game_id):
+        amount = self.get_all_by_attribute("game_id", game_id)
+        return len(amount)
