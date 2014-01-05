@@ -52,7 +52,74 @@
         [self initLog];
         NSLog(@"Logging enabled");
     }
+    
+    [self requestForPossibleGame];
 }
+
+#pragma mark
+
+- (void)setFindGameTimer
+{
+    [_findGameTimer invalidate];
+    _findGameTimer = nil;
+    _findGameTimer = [NSTimer scheduledTimerWithTimeInterval:5.0f
+                                                      target:self
+                                                    selector:@selector(requestForPossibleGame)
+                                                    userInfo:nil
+                                                     repeats:NO];
+}
+
+- (void)requestForPossibleGame
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *uuid = [defaults valueForKey:@"uuid"];
+    
+    // Send an API call
+    NSString *strURL = [NSString stringWithFormat:@"%@/start?uuid=%@", kApiUrl, uuid];
+    ServerConnection *APIrequest = [[ServerConnection alloc] initWithURL:strURL method:@"GET"];
+    [APIrequest startRequestWithCompletionHandler:^(BOOL success, NSData *data, NSDictionary *json) {
+        if (success) {
+            RMLog(@"JSON: %@", json);
+            if ([AppDelegate sharedDelegate].inGame == NO) {
+                RMLog(@"End timer and start game");
+                [_findGameTimer invalidate];
+                _findGameTimer = nil;
+                
+                id statusCode = [json objectForKey:@"status_code"];
+                if (statusCode == nil) {
+                    RMLog(@"No status available");
+                    return;
+                }
+                
+                if ([statusCode isKindOfClass:[NSNumber class]]) {
+                    statusCode = [statusCode stringValue];
+                }
+                
+                if ([statusCode isEqualToString:@"200"]) {
+                    
+                    NSDictionary *response = [json objectForKey:@"response"];
+                    if (response && [response isKindOfClass:[NSDictionary class]]) {
+                        
+                        id gameId = [response objectForKey:@"game_id"];
+                        [[NSUserDefaults standardUserDefaults] setObject:gameId forKey:@"game_id"];
+                        [self.navigationController pushViewController:_gameView animated:YES];
+                        
+                    }
+                }
+                
+            } else {
+                // start a new timer to check again
+                [self setFindGameTimer];
+            }
+        } else {
+            // start a new timer to check again
+            RMLog(@"No result, Response: %@", [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
+            [self setFindGameTimer];
+        }
+    }];
+}
+
+#pragma mark
 
 - (void)viewDidAppear:(BOOL)animated {
     if([[TGAccessoryManager sharedTGAccessoryManager] accessory] != nil) {
