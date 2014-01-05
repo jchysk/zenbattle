@@ -27,7 +27,11 @@
 {
     [super viewDidLoad];
     
-    _gameView = [[GameViewController alloc] initWithNibName:@"GameViewController" bundle:nil];
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+        _gameView = [[GameViewController alloc] initWithNibName:@"GameViewController" bundle:nil];
+    } else {
+        _gameView = [[GameViewController alloc] initWithNibName:@"GameViewController_iPad" bundle:nil];
+    }
     
     NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
     NSString *code = [defaults stringForKey:@"user_id"];
@@ -56,8 +60,14 @@
     } else {
         NSLog(@"accessory not found");
         connected = NO;
-        NotConnected *notConnectedView = [[NotConnected alloc] initWithNibName:@"NotConnected" bundle:nil];
-        [self presentViewController:notConnectedView animated:YES completion:nil];
+        
+        if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+            NotConnected *notConnectedView = [[NotConnected alloc] initWithNibName:@"NotConnected" bundle:nil];
+            [self presentViewController:notConnectedView animated:YES completion:nil];
+        } else {
+            NotConnected *notConnectedView = [[NotConnected alloc] initWithNibName:@"NotConnected_iPad" bundle:nil];
+            [self presentViewController:notConnectedView animated:YES completion:nil];
+        }
     }
     
     if(updateThread == nil) {

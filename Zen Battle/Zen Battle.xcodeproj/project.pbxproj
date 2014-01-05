@@ -41,6 +41,8 @@
 		5ECEBB771878DCBA0089B859 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5ECEBB751878DCBA0089B859 /* InfoPlist.strings */; };
 		5ECEBB791878DCBA0089B859 /* Zen_BattleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ECEBB781878DCBA0089B859 /* Zen_BattleTests.m */; };
 		94D376FC1879DE3800ED0378 /* libTGAccessory.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 94D376F81879DE1200ED0378 /* libTGAccessory.a */; };
+		94D37713187A006A00ED0378 /* GameViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94D37712187A006A00ED0378 /* GameViewController_iPad.xib */; };
+		94D37715187A009300ED0378 /* NotConnected_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94D37714187A009300ED0378 /* NotConnected_iPad.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +106,8 @@
 		94D376F81879DE1200ED0378 /* libTGAccessory.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTGAccessory.a; sourceTree = "<group>"; };
 		94D376F91879DE1200ED0378 /* TGAccessoryDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGAccessoryDelegate.h; sourceTree = "<group>"; };
 		94D376FA1879DE1200ED0378 /* TGAccessoryManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGAccessoryManager.h; sourceTree = "<group>"; };
+		94D37712187A006A00ED0378 /* GameViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameViewController_iPad.xib; sourceTree = "<group>"; };
+		94D37714187A009300ED0378 /* NotConnected_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotConnected_iPad.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,12 +220,14 @@
 				5E2CA3FB1879176400BDCC3A /* Classes */,
 				5EB2BF96187948040052A470 /* GameViewController.h */,
 				5EB2BF97187948040052A470 /* GameViewController.m */,
+				94D37712187A006A00ED0378 /* GameViewController_iPad.xib */,
 				5EB2BF98187948040052A470 /* GameViewController.xib */,
 				5ECEBB651878DCBA0089B859 /* Images.xcassets */,
 				5ECEBB5F1878DCBA0089B859 /* Main_iPad.storyboard */,
 				5ECEBB5C1878DCBA0089B859 /* Main_iPhone.storyboard */,
 				5EB2BF84187939870052A470 /* NotConnected.h */,
 				5EB2BF85187939870052A470 /* NotConnected.m */,
+				94D37714187A009300ED0378 /* NotConnected_iPad.xib */,
 				5EB2BF86187939870052A470 /* NotConnected.xib */,
 				5ECEBB621878DCBA0089B859 /* RootViewController.h */,
 				5ECEBB631878DCBA0089B859 /* RootViewController.m */,
@@ -349,12 +355,14 @@
 				5EB2BF9418793AA90052A470 /* Signal_Connecting3.png in Resources */,
 				5EB2BF9318793AA90052A470 /* Signal_Connecting2.png in Resources */,
 				5ECEBB611878DCBA0089B859 /* Main_iPad.storyboard in Resources */,
+				94D37713187A006A00ED0378 /* GameViewController_iPad.xib in Resources */,
 				5EB2BF8B18793A980052A470 /* no_accessory.png in Resources */,
 				5ECEBB661878DCBA0089B859 /* Images.xcassets in Resources */,
 				5EB2BF88187939870052A470 /* NotConnected.xib in Resources */,
 				5EB2BF9518793AA90052A470 /* Signal_Disconnected.png in Resources */,
 				5EB2BF9A187948040052A470 /* GameViewController.xib in Resources */,
 				5ECEBB5E1878DCBA0089B859 /* Main_iPhone.storyboard in Resources */,
+				94D37715187A009300ED0378 /* NotConnected_iPad.xib in Resources */,
 				5ECEBB551878DCBA0089B859 /* InfoPlist.strings in Resources */,
 				5EB2BF9218793AA90052A470 /* Signal_Connecting1.png in Resources */,
 			);
