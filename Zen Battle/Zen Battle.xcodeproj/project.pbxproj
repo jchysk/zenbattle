@@ -1,0 +1,632 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5E2CA3F31878F0F800BDCC3A /* libTGAccessory.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E2CA3F01878F0F800BDCC3A /* libTGAccessory.a */; };
+		5E2CA3F51879071100BDCC3A /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E2CA3F41879071100BDCC3A /* ExternalAccessory.framework */; };
+		5E2CA3F71879071900BDCC3A /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E2CA3F61879071900BDCC3A /* Accelerate.framework */; };
+		5E2CA3FA18790C8700BDCC3A /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E2CA3F918790C8700BDCC3A /* KeychainItemWrapper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		5E2CA3FE1879177400BDCC3A /* ServerConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E2CA3FD1879177400BDCC3A /* ServerConnection.m */; };
+		5E2CA4011879178B00BDCC3A /* RMUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E2CA4001879178B00BDCC3A /* RMUtils.m */; };
+		5E2CA4051879192A00BDCC3A /* NSDictionary+TypeCast.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E2CA4041879192A00BDCC3A /* NSDictionary+TypeCast.m */; };
+		5EB2BF87187939870052A470 /* NotConnected.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB2BF85187939870052A470 /* NotConnected.m */; };
+		5EB2BF88187939870052A470 /* NotConnected.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EB2BF86187939870052A470 /* NotConnected.xib */; };
+		5EB2BF8B18793A980052A470 /* no_accessory.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EB2BF8A18793A980052A470 /* no_accessory.png */; };
+		5EB2BF9118793AA90052A470 /* Signal_Connected.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EB2BF8C18793AA90052A470 /* Signal_Connected.png */; };
+		5EB2BF9218793AA90052A470 /* Signal_Connecting1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EB2BF8D18793AA90052A470 /* Signal_Connecting1.png */; };
+		5EB2BF9318793AA90052A470 /* Signal_Connecting2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EB2BF8E18793AA90052A470 /* Signal_Connecting2.png */; };
+		5EB2BF9418793AA90052A470 /* Signal_Connecting3.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EB2BF8F18793AA90052A470 /* Signal_Connecting3.png */; };
+		5EB2BF9518793AA90052A470 /* Signal_Disconnected.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EB2BF9018793AA90052A470 /* Signal_Disconnected.png */; };
+		5EB2BF99187948040052A470 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB2BF97187948040052A470 /* GameViewController.m */; };
+		5EB2BF9A187948040052A470 /* GameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EB2BF98187948040052A470 /* GameViewController.xib */; };
+		5EB2BF9F18794AEA0052A470 /* PercentageChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB2BF9C18794AEA0052A470 /* PercentageChart.m */; };
+		5EB2BFA018794AEA0052A470 /* PercentageChartLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB2BF9E18794AEA0052A470 /* PercentageChartLayer.m */; };
+		5ECEBB4B1878DCBA0089B859 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ECEBB4A1878DCBA0089B859 /* Foundation.framework */; };
+		5ECEBB4D1878DCBA0089B859 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ECEBB4C1878DCBA0089B859 /* CoreGraphics.framework */; };
+		5ECEBB4F1878DCBA0089B859 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ECEBB4E1878DCBA0089B859 /* UIKit.framework */; };
+		5ECEBB551878DCBA0089B859 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5ECEBB531878DCBA0089B859 /* InfoPlist.strings */; };
+		5ECEBB571878DCBA0089B859 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ECEBB561878DCBA0089B859 /* main.m */; };
+		5ECEBB5B1878DCBA0089B859 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ECEBB5A1878DCBA0089B859 /* AppDelegate.m */; };
+		5ECEBB5E1878DCBA0089B859 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5ECEBB5C1878DCBA0089B859 /* Main_iPhone.storyboard */; };
+		5ECEBB611878DCBA0089B859 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5ECEBB5F1878DCBA0089B859 /* Main_iPad.storyboard */; };
+		5ECEBB641878DCBA0089B859 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ECEBB631878DCBA0089B859 /* RootViewController.m */; };
+		5ECEBB661878DCBA0089B859 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5ECEBB651878DCBA0089B859 /* Images.xcassets */; };
+		5ECEBB6D1878DCBA0089B859 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ECEBB6C1878DCBA0089B859 /* XCTest.framework */; };
+		5ECEBB6E1878DCBA0089B859 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ECEBB4A1878DCBA0089B859 /* Foundation.framework */; };
+		5ECEBB6F1878DCBA0089B859 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ECEBB4E1878DCBA0089B859 /* UIKit.framework */; };
+		5ECEBB771878DCBA0089B859 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5ECEBB751878DCBA0089B859 /* InfoPlist.strings */; };
+		5ECEBB791878DCBA0089B859 /* Zen_BattleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ECEBB781878DCBA0089B859 /* Zen_BattleTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5ECEBB701878DCBA0089B859 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5ECEBB3F1878DCBA0089B859 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5ECEBB461878DCBA0089B859;
+			remoteInfo = "Zen Battle";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5E2CA3F01878F0F800BDCC3A /* libTGAccessory.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTGAccessory.a; sourceTree = "<group>"; };
+		5E2CA3F11878F0F800BDCC3A /* TGAccessoryDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGAccessoryDelegate.h; sourceTree = "<group>"; };
+		5E2CA3F21878F0F800BDCC3A /* TGAccessoryManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGAccessoryManager.h; sourceTree = "<group>"; };
+		5E2CA3F41879071100BDCC3A /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
+		5E2CA3F61879071900BDCC3A /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		5E2CA3F818790C8700BDCC3A /* KeychainItemWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainItemWrapper.h; sourceTree = "<group>"; };
+		5E2CA3F918790C8700BDCC3A /* KeychainItemWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainItemWrapper.m; sourceTree = "<group>"; };
+		5E2CA3FC1879177400BDCC3A /* ServerConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerConnection.h; sourceTree = "<group>"; };
+		5E2CA3FD1879177400BDCC3A /* ServerConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerConnection.m; sourceTree = "<group>"; };
+		5E2CA3FF1879178B00BDCC3A /* RMUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMUtils.h; sourceTree = "<group>"; };
+		5E2CA4001879178B00BDCC3A /* RMUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMUtils.m; sourceTree = "<group>"; };
+		5E2CA4021879185500BDCC3A /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		5E2CA4031879192A00BDCC3A /* NSDictionary+TypeCast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+TypeCast.h"; sourceTree = "<group>"; };
+		5E2CA4041879192A00BDCC3A /* NSDictionary+TypeCast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+TypeCast.m"; sourceTree = "<group>"; };
+		5EB2BF84187939870052A470 /* NotConnected.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotConnected.h; sourceTree = "<group>"; };
+		5EB2BF85187939870052A470 /* NotConnected.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotConnected.m; sourceTree = "<group>"; };
+		5EB2BF86187939870052A470 /* NotConnected.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotConnected.xib; sourceTree = "<group>"; };
+		5EB2BF8A18793A980052A470 /* no_accessory.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = no_accessory.png; sourceTree = "<group>"; };
+		5EB2BF8C18793AA90052A470 /* Signal_Connected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Signal_Connected.png; sourceTree = "<group>"; };
+		5EB2BF8D18793AA90052A470 /* Signal_Connecting1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Signal_Connecting1.png; sourceTree = "<group>"; };
+		5EB2BF8E18793AA90052A470 /* Signal_Connecting2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Signal_Connecting2.png; sourceTree = "<group>"; };
+		5EB2BF8F18793AA90052A470 /* Signal_Connecting3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Signal_Connecting3.png; sourceTree = "<group>"; };
+		5EB2BF9018793AA90052A470 /* Signal_Disconnected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Signal_Disconnected.png; sourceTree = "<group>"; };
+		5EB2BF96187948040052A470 /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		5EB2BF97187948040052A470 /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		5EB2BF98187948040052A470 /* GameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameViewController.xib; sourceTree = "<group>"; };
+		5EB2BF9B18794AEA0052A470 /* PercentageChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PercentageChart.h; sourceTree = "<group>"; };
+		5EB2BF9C18794AEA0052A470 /* PercentageChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PercentageChart.m; sourceTree = "<group>"; };
+		5EB2BF9D18794AEA0052A470 /* PercentageChartLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PercentageChartLayer.h; sourceTree = "<group>"; };
+		5EB2BF9E18794AEA0052A470 /* PercentageChartLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PercentageChartLayer.m; sourceTree = "<group>"; };
+		5ECEBB471878DCBA0089B859 /* Zen Battle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Zen Battle.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5ECEBB4A1878DCBA0089B859 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5ECEBB4C1878DCBA0089B859 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		5ECEBB4E1878DCBA0089B859 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		5ECEBB521878DCBA0089B859 /* Zen Battle-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Zen Battle-Info.plist"; sourceTree = "<group>"; };
+		5ECEBB541878DCBA0089B859 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5ECEBB561878DCBA0089B859 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5ECEBB581878DCBA0089B859 /* Zen Battle-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Zen Battle-Prefix.pch"; sourceTree = "<group>"; };
+		5ECEBB591878DCBA0089B859 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5ECEBB5A1878DCBA0089B859 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5ECEBB5D1878DCBA0089B859 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		5ECEBB601878DCBA0089B859 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		5ECEBB621878DCBA0089B859 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		5ECEBB631878DCBA0089B859 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		5ECEBB651878DCBA0089B859 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5ECEBB6B1878DCBA0089B859 /* Zen BattleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Zen BattleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5ECEBB6C1878DCBA0089B859 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		5ECEBB741878DCBA0089B859 /* Zen BattleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Zen BattleTests-Info.plist"; sourceTree = "<group>"; };
+		5ECEBB761878DCBA0089B859 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5ECEBB781878DCBA0089B859 /* Zen_BattleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Zen_BattleTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5ECEBB441878DCBA0089B859 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E2CA3F71879071900BDCC3A /* Accelerate.framework in Frameworks */,
+				5E2CA3F51879071100BDCC3A /* ExternalAccessory.framework in Frameworks */,
+				5ECEBB4D1878DCBA0089B859 /* CoreGraphics.framework in Frameworks */,
+				5E2CA3F31878F0F800BDCC3A /* libTGAccessory.a in Frameworks */,
+				5ECEBB4F1878DCBA0089B859 /* UIKit.framework in Frameworks */,
+				5ECEBB4B1878DCBA0089B859 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5ECEBB681878DCBA0089B859 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5ECEBB6D1878DCBA0089B859 /* XCTest.framework in Frameworks */,
+				5ECEBB6F1878DCBA0089B859 /* UIKit.framework in Frameworks */,
+				5ECEBB6E1878DCBA0089B859 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5E2CA3EF1878F0F800BDCC3A /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				5E2CA3F01878F0F800BDCC3A /* libTGAccessory.a */,
+				5E2CA3F11878F0F800BDCC3A /* TGAccessoryDelegate.h */,
+				5E2CA3F21878F0F800BDCC3A /* TGAccessoryManager.h */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		5E2CA3FB1879176400BDCC3A /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				5E2CA3F818790C8700BDCC3A /* KeychainItemWrapper.h */,
+				5E2CA3F918790C8700BDCC3A /* KeychainItemWrapper.m */,
+				5E2CA4031879192A00BDCC3A /* NSDictionary+TypeCast.h */,
+				5E2CA4041879192A00BDCC3A /* NSDictionary+TypeCast.m */,
+				5EB2BF9B18794AEA0052A470 /* PercentageChart.h */,
+				5EB2BF9C18794AEA0052A470 /* PercentageChart.m */,
+				5EB2BF9D18794AEA0052A470 /* PercentageChartLayer.h */,
+				5EB2BF9E18794AEA0052A470 /* PercentageChartLayer.m */,
+				5E2CA3FF1879178B00BDCC3A /* RMUtils.h */,
+				5E2CA4001879178B00BDCC3A /* RMUtils.m */,
+				5E2CA3FC1879177400BDCC3A /* ServerConnection.h */,
+				5E2CA3FD1879177400BDCC3A /* ServerConnection.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		5EB2BF8918793A680052A470 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				5EB2BF8C18793AA90052A470 /* Signal_Connected.png */,
+				5EB2BF8D18793AA90052A470 /* Signal_Connecting1.png */,
+				5EB2BF8E18793AA90052A470 /* Signal_Connecting2.png */,
+				5EB2BF8F18793AA90052A470 /* Signal_Connecting3.png */,
+				5EB2BF9018793AA90052A470 /* Signal_Disconnected.png */,
+				5EB2BF8A18793A980052A470 /* no_accessory.png */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		5EB2BFA1187987DF0052A470 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				5ECEBB591878DCBA0089B859 /* AppDelegate.h */,
+				5ECEBB5A1878DCBA0089B859 /* AppDelegate.m */,
+				5E2CA4021879185500BDCC3A /* Constants.h */,
+			);
+			name = Application;
+			sourceTree = "<group>";
+		};
+		5ECEBB3E1878DCBA0089B859 = {
+			isa = PBXGroup;
+			children = (
+				5ECEBB501878DCBA0089B859 /* Zen Battle */,
+				5ECEBB721878DCBA0089B859 /* Zen BattleTests */,
+				5ECEBB491878DCBA0089B859 /* Frameworks */,
+				5ECEBB481878DCBA0089B859 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5ECEBB481878DCBA0089B859 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5ECEBB471878DCBA0089B859 /* Zen Battle.app */,
+				5ECEBB6B1878DCBA0089B859 /* Zen BattleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5ECEBB491878DCBA0089B859 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5E2CA3F61879071900BDCC3A /* Accelerate.framework */,
+				5E2CA3F41879071100BDCC3A /* ExternalAccessory.framework */,
+				5ECEBB4A1878DCBA0089B859 /* Foundation.framework */,
+				5ECEBB4C1878DCBA0089B859 /* CoreGraphics.framework */,
+				5ECEBB4E1878DCBA0089B859 /* UIKit.framework */,
+				5ECEBB6C1878DCBA0089B859 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5ECEBB501878DCBA0089B859 /* Zen Battle */ = {
+			isa = PBXGroup;
+			children = (
+				5EB2BFA1187987DF0052A470 /* Application */,
+				5EB2BF8918793A680052A470 /* Assets */,
+				5E2CA3FB1879176400BDCC3A /* Classes */,
+				5EB2BF96187948040052A470 /* GameViewController.h */,
+				5EB2BF97187948040052A470 /* GameViewController.m */,
+				5EB2BF98187948040052A470 /* GameViewController.xib */,
+				5ECEBB651878DCBA0089B859 /* Images.xcassets */,
+				5E2CA3EF1878F0F800BDCC3A /* lib */,
+				5ECEBB5F1878DCBA0089B859 /* Main_iPad.storyboard */,
+				5ECEBB5C1878DCBA0089B859 /* Main_iPhone.storyboard */,
+				5EB2BF84187939870052A470 /* NotConnected.h */,
+				5EB2BF85187939870052A470 /* NotConnected.m */,
+				5EB2BF86187939870052A470 /* NotConnected.xib */,
+				5ECEBB621878DCBA0089B859 /* RootViewController.h */,
+				5ECEBB631878DCBA0089B859 /* RootViewController.m */,
+				5ECEBB511878DCBA0089B859 /* Supporting Files */,
+			);
+			path = "Zen Battle";
+			sourceTree = "<group>";
+		};
+		5ECEBB511878DCBA0089B859 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5ECEBB521878DCBA0089B859 /* Zen Battle-Info.plist */,
+				5ECEBB531878DCBA0089B859 /* InfoPlist.strings */,
+				5ECEBB561878DCBA0089B859 /* main.m */,
+				5ECEBB581878DCBA0089B859 /* Zen Battle-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5ECEBB721878DCBA0089B859 /* Zen BattleTests */ = {
+			isa = PBXGroup;
+			children = (
+				5ECEBB781878DCBA0089B859 /* Zen_BattleTests.m */,
+				5ECEBB731878DCBA0089B859 /* Supporting Files */,
+			);
+			path = "Zen BattleTests";
+			sourceTree = "<group>";
+		};
+		5ECEBB731878DCBA0089B859 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5ECEBB741878DCBA0089B859 /* Zen BattleTests-Info.plist */,
+				5ECEBB751878DCBA0089B859 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5ECEBB461878DCBA0089B859 /* Zen Battle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5ECEBB7C1878DCBA0089B859 /* Build configuration list for PBXNativeTarget "Zen Battle" */;
+			buildPhases = (
+				5ECEBB431878DCBA0089B859 /* Sources */,
+				5ECEBB441878DCBA0089B859 /* Frameworks */,
+				5ECEBB451878DCBA0089B859 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Zen Battle";
+			productName = "Zen Battle";
+			productReference = 5ECEBB471878DCBA0089B859 /* Zen Battle.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5ECEBB6A1878DCBA0089B859 /* Zen BattleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5ECEBB7F1878DCBA0089B859 /* Build configuration list for PBXNativeTarget "Zen BattleTests" */;
+			buildPhases = (
+				5ECEBB671878DCBA0089B859 /* Sources */,
+				5ECEBB681878DCBA0089B859 /* Frameworks */,
+				5ECEBB691878DCBA0089B859 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5ECEBB711878DCBA0089B859 /* PBXTargetDependency */,
+			);
+			name = "Zen BattleTests";
+			productName = "Zen BattleTests";
+			productReference = 5ECEBB6B1878DCBA0089B859 /* Zen BattleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5ECEBB3F1878DCBA0089B859 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Raster Media";
+				TargetAttributes = {
+					5ECEBB6A1878DCBA0089B859 = {
+						TestTargetID = 5ECEBB461878DCBA0089B859;
+					};
+				};
+			};
+			buildConfigurationList = 5ECEBB421878DCBA0089B859 /* Build configuration list for PBXProject "Zen Battle" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5ECEBB3E1878DCBA0089B859;
+			productRefGroup = 5ECEBB481878DCBA0089B859 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5ECEBB461878DCBA0089B859 /* Zen Battle */,
+				5ECEBB6A1878DCBA0089B859 /* Zen BattleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5ECEBB451878DCBA0089B859 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EB2BF9118793AA90052A470 /* Signal_Connected.png in Resources */,
+				5EB2BF9418793AA90052A470 /* Signal_Connecting3.png in Resources */,
+				5EB2BF9318793AA90052A470 /* Signal_Connecting2.png in Resources */,
+				5ECEBB611878DCBA0089B859 /* Main_iPad.storyboard in Resources */,
+				5EB2BF8B18793A980052A470 /* no_accessory.png in Resources */,
+				5ECEBB661878DCBA0089B859 /* Images.xcassets in Resources */,
+				5EB2BF88187939870052A470 /* NotConnected.xib in Resources */,
+				5EB2BF9518793AA90052A470 /* Signal_Disconnected.png in Resources */,
+				5EB2BF9A187948040052A470 /* GameViewController.xib in Resources */,
+				5ECEBB5E1878DCBA0089B859 /* Main_iPhone.storyboard in Resources */,
+				5ECEBB551878DCBA0089B859 /* InfoPlist.strings in Resources */,
+				5EB2BF9218793AA90052A470 /* Signal_Connecting1.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5ECEBB691878DCBA0089B859 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5ECEBB771878DCBA0089B859 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5ECEBB431878DCBA0089B859 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E2CA3FA18790C8700BDCC3A /* KeychainItemWrapper.m in Sources */,
+				5E2CA3FE1879177400BDCC3A /* ServerConnection.m in Sources */,
+				5E2CA4011879178B00BDCC3A /* RMUtils.m in Sources */,
+				5ECEBB641878DCBA0089B859 /* RootViewController.m in Sources */,
+				5EB2BF99187948040052A470 /* GameViewController.m in Sources */,
+				5ECEBB5B1878DCBA0089B859 /* AppDelegate.m in Sources */,
+				5EB2BF87187939870052A470 /* NotConnected.m in Sources */,
+				5E2CA4051879192A00BDCC3A /* NSDictionary+TypeCast.m in Sources */,
+				5EB2BF9F18794AEA0052A470 /* PercentageChart.m in Sources */,
+				5EB2BFA018794AEA0052A470 /* PercentageChartLayer.m in Sources */,
+				5ECEBB571878DCBA0089B859 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5ECEBB671878DCBA0089B859 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5ECEBB791878DCBA0089B859 /* Zen_BattleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5ECEBB711878DCBA0089B859 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5ECEBB461878DCBA0089B859 /* Zen Battle */;
+			targetProxy = 5ECEBB701878DCBA0089B859 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5ECEBB531878DCBA0089B859 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5ECEBB541878DCBA0089B859 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		5ECEBB5C1878DCBA0089B859 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5ECEBB5D1878DCBA0089B859 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		5ECEBB5F1878DCBA0089B859 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5ECEBB601878DCBA0089B859 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		5ECEBB751878DCBA0089B859 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5ECEBB761878DCBA0089B859 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5ECEBB7A1878DCBA0089B859 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5ECEBB7B1878DCBA0089B859 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5ECEBB7D1878DCBA0089B859 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Zen Battle/Zen Battle-Prefix.pch";
+				INFOPLIST_FILE = "Zen Battle/Zen Battle-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/localhost/zenbattle/Zen\\ Battle/Zen\\ Battle/lib",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "armv7 armv7s";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		5ECEBB7E1878DCBA0089B859 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Zen Battle/Zen Battle-Prefix.pch";
+				INFOPLIST_FILE = "Zen Battle/Zen Battle-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/localhost/zenbattle/Zen\\ Battle/Zen\\ Battle/lib",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "armv7 armv7s";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		5ECEBB801878DCBA0089B859 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Zen Battle.app/Zen Battle";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Zen Battle/Zen Battle-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Zen BattleTests/Zen BattleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		5ECEBB811878DCBA0089B859 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Zen Battle.app/Zen Battle";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Zen Battle/Zen Battle-Prefix.pch";
+				INFOPLIST_FILE = "Zen BattleTests/Zen BattleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5ECEBB421878DCBA0089B859 /* Build configuration list for PBXProject "Zen Battle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5ECEBB7A1878DCBA0089B859 /* Debug */,
+				5ECEBB7B1878DCBA0089B859 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5ECEBB7C1878DCBA0089B859 /* Build configuration list for PBXNativeTarget "Zen Battle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5ECEBB7D1878DCBA0089B859 /* Debug */,
+				5ECEBB7E1878DCBA0089B859 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5ECEBB7F1878DCBA0089B859 /* Build configuration list for PBXNativeTarget "Zen BattleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5ECEBB801878DCBA0089B859 /* Debug */,
+				5ECEBB811878DCBA0089B859 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5ECEBB3F1878DCBA0089B859 /* Project object */;
+}
