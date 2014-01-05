@@ -16,7 +16,7 @@
 
 @property (nonatomic, assign) id <TGAccessoryDelegate> delegate;
 
-@property (nonatomic, assign) BOOL *inGame;
+@property (nonatomic, assign) BOOL inGame;
 
 - (NSString *)getUUID;
 

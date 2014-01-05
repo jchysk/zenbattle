@@ -41,9 +41,9 @@
             if ([[json objectForKey:@"status_code"] intValue] < 400 ) {
                 [defaults setValue:[[json objectForKey:@"response"] objectForKey:@"user_id"] forKey:@"user_id"];
 
-                [RMUtils showAlertViewWithTitle:@""
-                                        message:@"Device Registered"
-                                  cancelMessage:@"OK"];
+//                [RMUtils showAlertViewWithTitle:@""
+//                                        message:@"Device Registered"
+//                                  cancelMessage:@"OK"];
                 
             } else {
                 

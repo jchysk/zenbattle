@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 Raster Media. All rights reserved.
 //
 
+#import "AppDelegate.h"
 #import "RootViewController.h"
 #import "ServerConnection.h"
 #import "NotConnected.h"
@@ -69,6 +70,8 @@
 }
 
 - (IBAction)startGame:(id)sender {
+    
+    [AppDelegate sharedDelegate].inGame = YES;
     
     NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
     // Set the UUID
@@ -233,30 +236,33 @@
 
 -(void)sendData:(NSDictionary *)data {
     
-    NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
-    [dict addEntriesFromDictionary:data];
-    // Set the UUID
-    [dict setValue:[[NSUserDefaults standardUserDefaults] valueForKey:@"uuid"] forKey:@"uuid"];
-    [dict setValue:[[NSUserDefaults standardUserDefaults] valueForKey:@"game_id"] forKey:@"game_id"];
-    
-    // Setup the JSON and URL
-	NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dict options:NSJSONWritingPrettyPrinted error:nil];
-    NSString *strURL = [NSString stringWithFormat:@"%@/eeg", kApiUrl];
-    NSString* jsonString = [[NSString alloc] initWithBytes:[jsonData bytes] length:[jsonData length] encoding:NSUTF8StringEncoding];
-    NSLog(@"jsonData: %@", jsonString );
+    if ([AppDelegate sharedDelegate].inGame) {
+        
+        NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
+        [dict addEntriesFromDictionary:data];
+        // Set the UUID
+        [dict setValue:[[NSUserDefaults standardUserDefaults] valueForKey:@"uuid"] forKey:@"uuid"];
+        [dict setValue:[[NSUserDefaults standardUserDefaults] valueForKey:@"game_id"] forKey:@"game_id"];
+        
+        // Setup the JSON and URL
+        NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dict options:NSJSONWritingPrettyPrinted error:nil];
+        NSString *strURL = [NSString stringWithFormat:@"%@/eeg", kApiUrl];
+        NSString* jsonString = [[NSString alloc] initWithBytes:[jsonData bytes] length:[jsonData length] encoding:NSUTF8StringEncoding];
+        NSLog(@"jsonData: %@", jsonString );
 
-    // Send an API call
-    ServerConnection *APIrequest = [[ServerConnection alloc] initWithURL:strURL method:@"POST"];
-    [APIrequest setDataJSON:jsonData];
-    [APIrequest startRequestWithCompletionHandler:^(BOOL success, NSData *data, NSDictionary *json) {
-        if (success) {
-            if ([[json objectForKey:@"status_code"] intValue] < 400 ) {
-                [RMUtils logWithNamespace:@"sendData" withMessage:@"Data Sent", json];
-            } else {
-                [RMUtils logWithNamespace:@"sendData" withMessage:@"ERROR SENDING DATA", json];
+        // Send an API call
+        ServerConnection *APIrequest = [[ServerConnection alloc] initWithURL:strURL method:@"POST"];
+        [APIrequest setDataJSON:jsonData];
+        [APIrequest startRequestWithCompletionHandler:^(BOOL success, NSData *data, NSDictionary *json) {
+            if (success) {
+                if ([[json objectForKey:@"status_code"] intValue] < 400 ) {
+                    [RMUtils logWithNamespace:@"sendData" withMessage:@"Data Sent", json];
+                } else {
+                    [RMUtils logWithNamespace:@"sendData" withMessage:@"ERROR SENDING DATA", json];
+                }
             }
-        }
-    }];
+        }];
+    }
 }
 
 #pragma mark -

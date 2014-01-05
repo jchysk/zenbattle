@@ -28,4 +28,6 @@
 
 -(IBAction) onGo:(id)sender;
 
+-(IBAction) endGame:(id)sender;
+
 @end

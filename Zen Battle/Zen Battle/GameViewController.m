@@ -52,6 +52,11 @@
 
 }
 
+- (IBAction)endGame:(id)sender {
+    [AppDelegate sharedDelegate].inGame = NO;
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
 -(void) onGo:(id)sender
 {
     [chart setPercentage:percentage];
