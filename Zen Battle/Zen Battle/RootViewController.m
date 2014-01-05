@@ -11,6 +11,7 @@
 #import "ServerConnection.h"
 #import "NotConnected.h"
 #import "GameViewController.h"
+#import "FinishedViewController.h"
 
 @interface RootViewController ()
 
@@ -31,6 +32,8 @@
 {
     [super viewDidLoad];
     
+    [AppDelegate sharedDelegate].inGame = YES;
+
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
         _gameView = [[GameViewController alloc] initWithNibName:@"GameViewController" bundle:nil];
     } else {
@@ -351,10 +354,18 @@
                 if ([[json objectForKey:@"status_code"] intValue] < 400 ) {
                     [RMUtils logWithNamespace:@"sendData" withMessage:@"Data Received", json];
                     
+#warning REMOVE THIS WHEN YOU GET SERVER RESPONSES!
+		    FinishedViewController *finishedVC = [[FinishedViewController alloc] initWithNibName:@"FinishedViewController_iPad" bundle:nil];
+		    [self.navigationController pushViewController:finishedVC animated:YES];
+		    [AppDelegate sharedDelegate].inGame = NO;
+
                     // {"status_code": 200, "response": {"status": "finished", "1": 0.0, "2": 0.0}}
                     if ([[[[json objectForKey:@"response"] objectForKey:@"status"] stringValue] isEqualToString:@"finished"]) {
                     
                         [RMUtils logWithNamespace:@"sendData" withMessage:@"FINISHED"];
+			[AppDelegate sharedDelegate].inGame = NO;
+			FinishedViewController *finishedVC = [[FinishedViewController alloc] initWithNibName:@"FinishedViewController_iPad" bundle:nil];
+			[self.navigationController pushViewController:finishedVC animated:YES];
                         
                     }
                 } else {
