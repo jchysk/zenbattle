@@ -266,7 +266,14 @@
         [APIrequest startRequestWithCompletionHandler:^(BOOL success, NSData *data, NSDictionary *json) {
             if (success) {
                 if ([[json objectForKey:@"status_code"] intValue] < 400 ) {
-                    [RMUtils logWithNamespace:@"sendData" withMessage:@"Data Sent", json];
+                    [RMUtils logWithNamespace:@"sendData" withMessage:@"Data Received", json];
+                    
+                    // {"status_code": 200, "response": {"status": "finished", "1": 0.0, "2": 0.0}}
+                    if ([[[[json objectForKey:@"response"] objectForKey:@"status"] stringValue] isEqualToString:@"finished"]) {
+                    
+                        [RMUtils logWithNamespace:@"sendData" withMessage:@"FINISHED"];
+                        
+                    }
                 } else {
                     [RMUtils logWithNamespace:@"sendData" withMessage:@"ERROR SENDING DATA", json];
                 }
