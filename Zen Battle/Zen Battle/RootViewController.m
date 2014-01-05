@@ -14,6 +14,8 @@
 
 @interface RootViewController ()
 
+@property (weak, nonatomic) IBOutlet UIButton * bttnJoin;
+
 @end
 
 @implementation RootViewController
@@ -102,7 +104,11 @@
                         
                         id gameId = [response objectForKey:@"game_id"];
                         [[NSUserDefaults standardUserDefaults] setObject:gameId forKey:@"game_id"];
-                        [self.navigationController pushViewController:_gameView animated:YES];
+                        
+                        [UIView animateWithDuration:0.2
+                                         animations:^{
+                                             _bttnJoin.alpha = 1.0f;
+                                         }];
                         
                     }
                 }
@@ -180,6 +186,11 @@
         }
 	[self.navigationController pushViewController:_gameView animated:YES];
     }];
+}
+
+- (IBAction)joinExistingGame:(id)sender
+{
+    [self.navigationController pushViewController:_gameView animated:YES];
 }
 
 - (UIImage *)updateSignalStatus {
@@ -413,7 +424,6 @@
 //        
 //    }
 //}
-
 
 - (void)didReceiveMemoryWarning
 {
