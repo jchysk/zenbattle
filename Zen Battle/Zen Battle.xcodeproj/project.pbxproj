@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5E2CA3F31878F0F800BDCC3A /* libTGAccessory.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E2CA3F01878F0F800BDCC3A /* libTGAccessory.a */; };
 		5E2CA3F51879071100BDCC3A /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E2CA3F41879071100BDCC3A /* ExternalAccessory.framework */; };
 		5E2CA3F71879071900BDCC3A /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E2CA3F61879071900BDCC3A /* Accelerate.framework */; };
 		5E2CA3FA18790C8700BDCC3A /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E2CA3F918790C8700BDCC3A /* KeychainItemWrapper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -41,6 +40,7 @@
 		5ECEBB6F1878DCBA0089B859 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ECEBB4E1878DCBA0089B859 /* UIKit.framework */; };
 		5ECEBB771878DCBA0089B859 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5ECEBB751878DCBA0089B859 /* InfoPlist.strings */; };
 		5ECEBB791878DCBA0089B859 /* Zen_BattleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ECEBB781878DCBA0089B859 /* Zen_BattleTests.m */; };
+		94D376FC1879DE3800ED0378 /* libTGAccessory.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 94D376F81879DE1200ED0378 /* libTGAccessory.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,9 +54,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5E2CA3F01878F0F800BDCC3A /* libTGAccessory.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTGAccessory.a; sourceTree = "<group>"; };
-		5E2CA3F11878F0F800BDCC3A /* TGAccessoryDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGAccessoryDelegate.h; sourceTree = "<group>"; };
-		5E2CA3F21878F0F800BDCC3A /* TGAccessoryManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGAccessoryManager.h; sourceTree = "<group>"; };
 		5E2CA3F41879071100BDCC3A /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
 		5E2CA3F61879071900BDCC3A /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		5E2CA3F818790C8700BDCC3A /* KeychainItemWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainItemWrapper.h; sourceTree = "<group>"; };
@@ -104,6 +101,9 @@
 		5ECEBB741878DCBA0089B859 /* Zen BattleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Zen BattleTests-Info.plist"; sourceTree = "<group>"; };
 		5ECEBB761878DCBA0089B859 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5ECEBB781878DCBA0089B859 /* Zen_BattleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Zen_BattleTests.m; sourceTree = "<group>"; };
+		94D376F81879DE1200ED0378 /* libTGAccessory.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTGAccessory.a; sourceTree = "<group>"; };
+		94D376F91879DE1200ED0378 /* TGAccessoryDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGAccessoryDelegate.h; sourceTree = "<group>"; };
+		94D376FA1879DE1200ED0378 /* TGAccessoryManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGAccessoryManager.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,10 +111,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94D376FC1879DE3800ED0378 /* libTGAccessory.a in Frameworks */,
 				5E2CA3F71879071900BDCC3A /* Accelerate.framework in Frameworks */,
 				5E2CA3F51879071100BDCC3A /* ExternalAccessory.framework in Frameworks */,
 				5ECEBB4D1878DCBA0089B859 /* CoreGraphics.framework in Frameworks */,
-				5E2CA3F31878F0F800BDCC3A /* libTGAccessory.a in Frameworks */,
 				5ECEBB4F1878DCBA0089B859 /* UIKit.framework in Frameworks */,
 				5ECEBB4B1878DCBA0089B859 /* Foundation.framework in Frameworks */,
 			);
@@ -133,16 +133,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5E2CA3EF1878F0F800BDCC3A /* lib */ = {
-			isa = PBXGroup;
-			children = (
-				5E2CA3F01878F0F800BDCC3A /* libTGAccessory.a */,
-				5E2CA3F11878F0F800BDCC3A /* TGAccessoryDelegate.h */,
-				5E2CA3F21878F0F800BDCC3A /* TGAccessoryManager.h */,
-			);
-			path = lib;
-			sourceTree = "<group>";
-		};
 		5E2CA3FB1879176400BDCC3A /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -220,6 +210,7 @@
 		5ECEBB501878DCBA0089B859 /* Zen Battle */ = {
 			isa = PBXGroup;
 			children = (
+				94D376F71879DE1200ED0378 /* lib */,
 				5EB2BFA1187987DF0052A470 /* Application */,
 				5EB2BF8918793A680052A470 /* Assets */,
 				5E2CA3FB1879176400BDCC3A /* Classes */,
@@ -227,7 +218,6 @@
 				5EB2BF97187948040052A470 /* GameViewController.m */,
 				5EB2BF98187948040052A470 /* GameViewController.xib */,
 				5ECEBB651878DCBA0089B859 /* Images.xcassets */,
-				5E2CA3EF1878F0F800BDCC3A /* lib */,
 				5ECEBB5F1878DCBA0089B859 /* Main_iPad.storyboard */,
 				5ECEBB5C1878DCBA0089B859 /* Main_iPhone.storyboard */,
 				5EB2BF84187939870052A470 /* NotConnected.h */,
@@ -267,6 +257,16 @@
 				5ECEBB751878DCBA0089B859 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		94D376F71879DE1200ED0378 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				94D376F81879DE1200ED0378 /* libTGAccessory.a */,
+				94D376F91879DE1200ED0378 /* TGAccessoryDelegate.h */,
+				94D376FA1879DE1200ED0378 /* TGAccessoryManager.h */,
+			);
+			path = lib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -528,6 +528,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"/localhost/zenbattle/Zen\\ Battle/Zen\\ Battle/lib",
+					"/Users/ryan/Documents/Other/ZenBattle/Zen\\ Battle/Zen\\ Battle/lib",
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -547,6 +548,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"/localhost/zenbattle/Zen\\ Battle/Zen\\ Battle/lib",
+					"/Users/ryan/Documents/Other/ZenBattle/Zen\\ Battle/Zen\\ Battle/lib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALID_ARCHS = "armv7 armv7s";
