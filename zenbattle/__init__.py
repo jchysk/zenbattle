@@ -1,21 +1,28 @@
 from pyramid.config import Configurator
+from pyramid_beaker import session_factory_from_settings
 from sqlalchemy import engine_from_config
-
-from .models import (
-    DBSession,
-    Base,
-    )
-
+from zenbattle.models import appmaker
 
 def main(global_config, **settings):
     """ This function returns a Pyramid WSGI application.
     """
-    engine = engine_from_config(settings, 'sqlalchemy.')
-    DBSession.configure(bind=engine)
-    Base.metadata.bind = engine
-    config = Configurator(settings=settings)
-    config.include('pyramid_chameleon')
-    config.add_static_view('static', 'static', cache_max_age=3600)
+    engine = engine_from_config(settings, 'sqlalchemy.', encoding='utf-8')
+    get_root = appmaker(engine)
+    session_factory = session_factory_from_settings(settings)
+    config = Configurator(settings=settings, root_factory=get_root)
+    config.include('pyramid_handlers')
+    config.include('pyramid_mako')
+    config.set_session_factory(session_factory)
+
+    #API endpoints
+    config.add_handler("eeg", "/v1/eeg*id", action="render_resource",
+                       handler="zenbattle.handlers.api.EEG",
+                       traverse='/zen')
+    config.add_handler("session", "/v1/session*id", action="render_resource",
+                       handler="zenbattle.handlers.api.Session",
+                       traverse='/zen')
     config.add_route('home', '/')
+    config.add_route
+
     config.scan()
     return config.make_wsgi_app()

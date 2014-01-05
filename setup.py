@@ -9,10 +9,13 @@ with open(os.path.join(here, 'CHANGES.txt')) as f:
     CHANGES = f.read()
 
 requires = [
+    'pastescript',
     'pyramid',
     'pyramid_chameleon',
-    'pyramid_debugtoolbar',
+    'pyramid_mako',
     'pyramid_tm',
+    'pyramid_beaker',
+    'pyramid_handlers',
     'SQLAlchemy',
     'transaction',
     'zope.sqlalchemy',
