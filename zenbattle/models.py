@@ -1,3 +1,4 @@
+import logging
 from sqlalchemy import (
     Column,
     Index,

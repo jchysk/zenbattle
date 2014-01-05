@@ -1,5 +1,4 @@
 import logging
-from formencode import variabledecode, Invalid
 
 
 class BaseHandler(object):
