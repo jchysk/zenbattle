@@ -15,13 +15,13 @@ def main(global_config, **settings):
     config.set_session_factory(session_factory)
 
     #API endpoints
-    config.add_handler("eeg", "/v1/eeg*id", action="render_resource",
+    config.add_handler("eeg", "/eeg*id", action="render_resource",
                        handler="zenbattle.handlers.api.EEG",
                        traverse='/zen')
-    config.add_handler("session", "/v1/session*id", action="render_resource",
-                       handler="zenbattle.handlers.api.Session",
+    config.add_handler("device", "/device*id", action="render_resource",
+                       handler="zenbattle.handlers.api.Device",
                        traverse='/zen')
-    config.add_route('home', '/')
+    #config.add_route('home', '/')
     config.add_route
 
     config.scan()
