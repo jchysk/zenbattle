@@ -19,6 +19,8 @@
 @implementation RootViewController
 {
     GameViewController * _gameView;
+    NotConnected * _notConnectedView;
+    NSTimer * _findGameTimer;
 }
 
 @synthesize myCode, wager, opponentCode, connected;
@@ -61,12 +63,14 @@
         NSLog(@"accessory not found");
         connected = NO;
         
-        if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
-            NotConnected *notConnectedView = [[NotConnected alloc] initWithNibName:@"NotConnected" bundle:nil];
-            [self presentViewController:notConnectedView animated:YES completion:nil];
-        } else {
-            NotConnected *notConnectedView = [[NotConnected alloc] initWithNibName:@"NotConnected_iPad" bundle:nil];
-            [self presentViewController:notConnectedView animated:YES completion:nil];
+        if (_notConnectedView == nil) {
+            if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+                _notConnectedView = [[NotConnected alloc] initWithNibName:@"NotConnected" bundle:nil];
+                [self presentViewController:_notConnectedView animated:YES completion:nil];
+            } else {
+                _notConnectedView = [[NotConnected alloc] initWithNibName:@"NotConnected_iPad" bundle:nil];
+                [self presentViewController:_notConnectedView animated:YES completion:nil];
+            }
         }
     }
     
@@ -313,12 +317,21 @@
 - (void)setLoadingScreenView {
 
     if([[TGAccessoryManager sharedTGAccessoryManager] accessory] == nil){
-        NotConnected *notConnectedView = [[NotConnected alloc] initWithNibName:@"NotConnected" bundle:nil];
-        [self presentViewController:notConnectedView animated:YES completion:nil];
+        connected = NO;
+        if (_notConnectedView == nil) {
+            if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+                _notConnectedView = [[NotConnected alloc] initWithNibName:@"NotConnected" bundle:nil];
+                [self presentViewController:_notConnectedView animated:YES completion:nil];
+            } else {
+                _notConnectedView = [[NotConnected alloc] initWithNibName:@"NotConnected_iPad" bundle:nil];
+                [self presentViewController:_notConnectedView animated:YES completion:nil];
+            }
+        }
     }
     else {
         if(!connected) {
-            [self dismissViewControllerAnimated:YES completion:nil];
+            [_notConnectedView dismissViewControllerAnimated:YES completion:nil];
+            _notConnectedView = nil;
         }
         [loadingScreen removeFromSuperview];
     }
