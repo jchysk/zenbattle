@@ -74,7 +74,7 @@ jsonData: {
         self.context['gamedata'].create(game_id, user.id, attention, meditation)
         #Now figure out current score
         game_data = self.context['gamedata'].get_all_by_attribute('game_id', game_id) #order by date_created desc
-
+        opp_attention = -1
         for count, each in enumerate(game_data):
             if each.user_id == game.player_id:
                 is_player1 = True
@@ -91,8 +91,10 @@ jsonData: {
                     prev = game_data[-(count + incr)]
                 #Sanity check
                 if prev.user_id != current.user_id:
-                    first = (current.attention - prev.attention) * milli / 1000.0
-                    second = (prev.attention - current.attention) * milli / 1000.0
+                    if opp_attention < 0:
+                        opp_attention = prev.attention
+                    first = (current.attention - prev.attention) * milli / 1000000.0
+                    second = (prev.attention - current.attention) * milli / 1000000.0
                     if is_player1:
                         game.player1_score += first
                         game.player2_score += second
@@ -116,13 +118,14 @@ jsonData: {
         score1 = game.player1_score / game_count / game.purse
         score2 = game.player2_score / game_count / game.purse
         return {"status": game.status, str(game.player_id): score1,
-                str(game.player2_id): score2}
+                str(game.player2_id): score2, "opp_attention": opp_attention}
 
 
 class Start(APIHandler):
 
     def _get(self):
-        uuid = self.request.json['uuid']
+        print "\n\nuuid\n" + repr(self.request.params) + "\n"
+        uuid = self.request.params['uuid']
         user = self.context['user'].get_by_attribute("user", uuid)
         if user is None:
             return {}
@@ -159,7 +162,9 @@ class Payment(APIHandler):
         headers = {}
         headers['Authorization'] = "Bearer " + access_token
         headers['Content-Type'] = "application/json"
-        response = requests.post("https://api.att.com/Security/Notary/Rest/1/SignedPayload", headers=headers, params=params)
+        headers['client_id'] = "yv59rvjxj43s99gbg7y3tn0j0yoe2jv0"
+        headers["client_secret"] = "znerf47rbkfrls1zbqtoejkdmurjdoug"
+        response = requests.post("https://api.att.com/Security/Notary/Rest/1/SignedPayload", headers=headers, params=merch)
         print repr(response.text)
 
     def _get(self):
