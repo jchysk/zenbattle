@@ -5,7 +5,7 @@ from sqlalchemy.exc import IntegrityError, ResourceClosedError
 from sqlalchemy.orm.exc import FlushError
 
 from zenbattle.models import DBSession, LOGGER
-from zenbattle.models import (User, Session)
+from zenbattle.models import (User, Session, Game, GameData)
 
 from functools import wraps
 
@@ -227,6 +227,35 @@ class UserFactory(BaseFactory):
         BaseFactory.__init__(self, User)
 
     def create_user(self, user_info):
+        exists = self.get_by_attribute("user", user_info)
+        if exists is not None:
+            return exists
         user = self.type(user_info)
         return self.add(user)
 
+
+class GameFactory(BaseFactory):
+
+    def __init__(self):
+        BaseFactory.__init__(self, Game)
+
+    def create(self, player_id, wager):
+        game = self.type(player_id, wager)
+        return self.add(game)
+
+    def get_active(self, player_id):
+        filters = [
+            self.type.player_id == player_id,
+            self.type.status == True,
+        ]
+        return self.get_query(filters=filters).scalar()
+
+
+class GameDataFactory(BaseFactory):
+
+    def __init__(self):
+        BaseFactory.__init__(self, GameData)
+
+    def create(self, game_id, user_id, attention, meditation):
+        data = self.type(game_id, user_id, attention, meditation)
+        return self.add(data)

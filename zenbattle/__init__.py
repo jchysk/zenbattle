@@ -21,6 +21,9 @@ def main(global_config, **settings):
     config.add_handler("device", "/device*id", action="render_resource",
                        handler="zenbattle.handlers.api.Device",
                        traverse='/zen')
+    config.add_handler("start", "/start*id", action="render_resource",
+                       handler="zenbattle.handlers.api.Start",
+                       traverse='/zen')
     #config.add_route('home', '/')
     config.add_route
 
