@@ -89,11 +89,12 @@
         if (success) {
             if ([[json objectForKey:@"status_code"] intValue] < 400 ) {
                 [RMUtils logWithNamespace:@"startGame" withMessage:@"Starting Game: %@", json];
+		[[NSUserDefaults standardUserDefaults] setValue:[[json objectForKey:@"response"] objectForKey:@"game_id"] forKey:@"game_id"];
             } else {
                 [RMUtils logWithNamespace:@"startGame" withMessage:@"ERROR SENDING DATA", json];
             }
         }
-        [self presentViewController:_gameView animated:YES completion:nil];
+	[self.navigationController pushViewController:_gameView animated:YES];
     }];
 }
 
@@ -236,6 +237,7 @@
     [dict addEntriesFromDictionary:data];
     // Set the UUID
     [dict setValue:[[NSUserDefaults standardUserDefaults] valueForKey:@"uuid"] forKey:@"uuid"];
+    [dict setValue:[[NSUserDefaults standardUserDefaults] valueForKey:@"game_id"] forKey:@"game_id"];
     
     // Setup the JSON and URL
 	NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dict options:NSJSONWritingPrettyPrinted error:nil];
