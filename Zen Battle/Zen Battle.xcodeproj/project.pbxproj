@@ -13,6 +13,12 @@
 		5E2CA3FE1879177400BDCC3A /* ServerConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E2CA3FD1879177400BDCC3A /* ServerConnection.m */; };
 		5E2CA4011879178B00BDCC3A /* RMUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E2CA4001879178B00BDCC3A /* RMUtils.m */; };
 		5E2CA4051879192A00BDCC3A /* NSDictionary+TypeCast.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E2CA4041879192A00BDCC3A /* NSDictionary+TypeCast.m */; };
+		5E5C42EC187A3BDF001B56E9 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E5C42EB187A3BDF001B56E9 /* Security.framework */; };
+		5E5C42EE187A3BE5001B56E9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E5C42ED187A3BE5001B56E9 /* QuartzCore.framework */; };
+		5E5C42F0187A3BEC001B56E9 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E5C42EF187A3BEC001B56E9 /* OpenGLES.framework */; };
+		5E5C42F2187A3BF2001B56E9 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E5C42F1187A3BF2001B56E9 /* CoreText.framework */; };
+		5E5C42F4187A3BFD001B56E9 /* libstdc++.6.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E5C42F3187A3BFD001B56E9 /* libstdc++.6.0.9.dylib */; };
+		5E5C42F6187A3C19001B56E9 /* ShinobiCharts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E5C42F5187A3C19001B56E9 /* ShinobiCharts.framework */; };
 		5EB2BF87187939870052A470 /* NotConnected.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB2BF85187939870052A470 /* NotConnected.m */; };
 		5EB2BF88187939870052A470 /* NotConnected.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EB2BF86187939870052A470 /* NotConnected.xib */; };
 		5EB2BF8B18793A980052A470 /* no_accessory.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EB2BF8A18793A980052A470 /* no_accessory.png */; };
@@ -78,6 +84,12 @@
 		5E2CA4021879185500BDCC3A /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		5E2CA4031879192A00BDCC3A /* NSDictionary+TypeCast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+TypeCast.h"; sourceTree = "<group>"; };
 		5E2CA4041879192A00BDCC3A /* NSDictionary+TypeCast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+TypeCast.m"; sourceTree = "<group>"; };
+		5E5C42EB187A3BDF001B56E9 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		5E5C42ED187A3BE5001B56E9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		5E5C42EF187A3BEC001B56E9 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		5E5C42F1187A3BF2001B56E9 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		5E5C42F3187A3BFD001B56E9 /* libstdc++.6.0.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.0.9.dylib"; path = "usr/lib/libstdc++.6.0.9.dylib"; sourceTree = SDKROOT; };
+		5E5C42F5187A3C19001B56E9 /* ShinobiCharts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShinobiCharts.framework; sourceTree = "<group>"; };
 		5EB2BF84187939870052A470 /* NotConnected.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotConnected.h; sourceTree = "<group>"; };
 		5EB2BF85187939870052A470 /* NotConnected.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotConnected.m; sourceTree = "<group>"; };
 		5EB2BF86187939870052A470 /* NotConnected.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotConnected.xib; sourceTree = "<group>"; };
@@ -141,6 +153,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E5C42F6187A3C19001B56E9 /* ShinobiCharts.framework in Frameworks */,
+				5E5C42F4187A3BFD001B56E9 /* libstdc++.6.0.9.dylib in Frameworks */,
+				5E5C42F2187A3BF2001B56E9 /* CoreText.framework in Frameworks */,
+				5E5C42F0187A3BEC001B56E9 /* OpenGLES.framework in Frameworks */,
+				5E5C42EE187A3BE5001B56E9 /* QuartzCore.framework in Frameworks */,
+				5E5C42EC187A3BDF001B56E9 /* Security.framework in Frameworks */,
 				94D376FC1879DE3800ED0378 /* libTGAccessory.a in Frameworks */,
 				5E2CA3F71879071900BDCC3A /* Accelerate.framework in Frameworks */,
 				5E2CA3F51879071100BDCC3A /* ExternalAccessory.framework in Frameworks */,
@@ -234,6 +252,12 @@
 		5ECEBB491878DCBA0089B859 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5E5C42F5187A3C19001B56E9 /* ShinobiCharts.framework */,
+				5E5C42F3187A3BFD001B56E9 /* libstdc++.6.0.9.dylib */,
+				5E5C42F1187A3BF2001B56E9 /* CoreText.framework */,
+				5E5C42EF187A3BEC001B56E9 /* OpenGLES.framework */,
+				5E5C42ED187A3BE5001B56E9 /* QuartzCore.framework */,
+				5E5C42EB187A3BDF001B56E9 /* Security.framework */,
 				5E2CA3F61879071900BDCC3A /* Accelerate.framework */,
 				5E2CA3F41879071100BDCC3A /* ExternalAccessory.framework */,
 				5ECEBB4A1878DCBA0089B859 /* Foundation.framework */,
@@ -587,6 +611,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/localhost/zenbattle/Zen\\ Battle",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Zen Battle/Zen Battle-Prefix.pch";
 				INFOPLIST_FILE = "Zen Battle/Zen Battle-Info.plist";
@@ -610,6 +638,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/localhost/zenbattle/Zen\\ Battle",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Zen Battle/Zen Battle-Prefix.pch";
 				INFOPLIST_FILE = "Zen Battle/Zen Battle-Info.plist";
