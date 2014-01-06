@@ -49,6 +49,11 @@
 		94F0E5A2187A1259009D9A5A /* FinishedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94F0E5A0187A1259009D9A5A /* FinishedViewController.xib */; };
 		94F0E5A4187A1290009D9A5A /* FinishedViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94F0E5A3187A1290009D9A5A /* FinishedViewController_iPad.xib */; };
 		94F0E5A6187A137A009D9A5A /* PaymentViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94F0E5A5187A137A009D9A5A /* PaymentViewController_iPad.xib */; };
+		94F0E5A9187A2C72009D9A5A /* WinParticleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94F0E5A8187A2C72009D9A5A /* WinParticleView.m */; };
+		94F0E5AC187A2CA3009D9A5A /* burst@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 94F0E5AA187A2CA3009D9A5A /* burst@2x~ipad.png */; };
+		94F0E5AD187A2CA3009D9A5A /* burst~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 94F0E5AB187A2CA3009D9A5A /* burst~ipad.png */; };
+		94F0E5B1187A32B8009D9A5A /* UILabelStroke.m in Sources */ = {isa = PBXBuildFile; fileRef = 94F0E5B0187A32B8009D9A5A /* UILabelStroke.m */; };
+		94F0E5B2187A33A7009D9A5A /* Poster Bodoni BT.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 94F0E5AE187A327E009D9A5A /* Poster Bodoni BT.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +127,13 @@
 		94F0E5A0187A1259009D9A5A /* FinishedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FinishedViewController.xib; sourceTree = "<group>"; };
 		94F0E5A3187A1290009D9A5A /* FinishedViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FinishedViewController_iPad.xib; sourceTree = "<group>"; };
 		94F0E5A5187A137A009D9A5A /* PaymentViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PaymentViewController_iPad.xib; sourceTree = "<group>"; };
+		94F0E5A7187A2C72009D9A5A /* WinParticleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WinParticleView.h; sourceTree = "<group>"; };
+		94F0E5A8187A2C72009D9A5A /* WinParticleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WinParticleView.m; sourceTree = "<group>"; };
+		94F0E5AA187A2CA3009D9A5A /* burst@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "burst@2x~ipad.png"; sourceTree = "<group>"; };
+		94F0E5AB187A2CA3009D9A5A /* burst~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "burst~ipad.png"; sourceTree = "<group>"; };
+		94F0E5AE187A327E009D9A5A /* Poster Bodoni BT.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poster Bodoni BT.ttf"; sourceTree = "<group>"; };
+		94F0E5AF187A32B8009D9A5A /* UILabelStroke.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UILabelStroke.h; sourceTree = "<group>"; };
+		94F0E5B0187A32B8009D9A5A /* UILabelStroke.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UILabelStroke.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +178,10 @@
 				5E2CA4001879178B00BDCC3A /* RMUtils.m */,
 				5E2CA3FC1879177400BDCC3A /* ServerConnection.h */,
 				5E2CA3FD1879177400BDCC3A /* ServerConnection.m */,
+				94F0E5AF187A32B8009D9A5A /* UILabelStroke.h */,
+				94F0E5B0187A32B8009D9A5A /* UILabelStroke.m */,
+				94F0E5A7187A2C72009D9A5A /* WinParticleView.h */,
+				94F0E5A8187A2C72009D9A5A /* WinParticleView.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -173,6 +189,9 @@
 		5EB2BF8918793A680052A470 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				94F0E5AE187A327E009D9A5A /* Poster Bodoni BT.ttf */,
+				94F0E5AA187A2CA3009D9A5A /* burst@2x~ipad.png */,
+				94F0E5AB187A2CA3009D9A5A /* burst~ipad.png */,
 				5EB2BF8C18793AA90052A470 /* Signal_Connected.png */,
 				5EB2BF8D18793AA90052A470 /* Signal_Connecting1.png */,
 				5EB2BF8E18793AA90052A470 /* Signal_Connecting2.png */,
@@ -376,6 +395,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94F0E5B2187A33A7009D9A5A /* Poster Bodoni BT.ttf in Resources */,
 				5EB2BF9118793AA90052A470 /* Signal_Connected.png in Resources */,
 				5EB2BF9418793AA90052A470 /* Signal_Connecting3.png in Resources */,
 				5EB2BF9318793AA90052A470 /* Signal_Connecting2.png in Resources */,
@@ -384,6 +404,8 @@
 				94F0E5A6187A137A009D9A5A /* PaymentViewController_iPad.xib in Resources */,
 				94D37713187A006A00ED0378 /* GameViewController_iPad.xib in Resources */,
 				5EB2BF8B18793A980052A470 /* no_accessory.png in Resources */,
+				94F0E5AC187A2CA3009D9A5A /* burst@2x~ipad.png in Resources */,
+				94F0E5AD187A2CA3009D9A5A /* burst~ipad.png in Resources */,
 				5ECEBB661878DCBA0089B859 /* Images.xcassets in Resources */,
 				5EB2BF88187939870052A470 /* NotConnected.xib in Resources */,
 				94F0E59D187A123C009D9A5A /* PaymentViewController.xib in Resources */,
@@ -417,8 +439,10 @@
 				94F0E5A1187A1259009D9A5A /* FinishedViewController.m in Sources */,
 				5E2CA4011879178B00BDCC3A /* RMUtils.m in Sources */,
 				94F0E59C187A123C009D9A5A /* PaymentViewController.m in Sources */,
+				94F0E5A9187A2C72009D9A5A /* WinParticleView.m in Sources */,
 				5ECEBB641878DCBA0089B859 /* RootViewController.m in Sources */,
 				5EB2BF99187948040052A470 /* GameViewController.m in Sources */,
+				94F0E5B1187A32B8009D9A5A /* UILabelStroke.m in Sources */,
 				5ECEBB5B1878DCBA0089B859 /* AppDelegate.m in Sources */,
 				5EB2BF87187939870052A470 /* NotConnected.m in Sources */,
 				5E2CA4051879192A00BDCC3A /* NSDictionary+TypeCast.m in Sources */,

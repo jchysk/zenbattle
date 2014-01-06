@@ -190,6 +190,7 @@
 
 - (IBAction)joinExistingGame:(id)sender
 {
+    [AppDelegate sharedDelegate].inGame = YES;
     [self.navigationController pushViewController:_gameView animated:YES];
 }
 
