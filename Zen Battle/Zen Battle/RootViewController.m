@@ -321,7 +321,7 @@
     _gameView.percentage = eSenseValues.attention;
     [_gameView.chart setPercentage:eSenseValues.attention];
     _gameView.percentageOpponent = 100 - eSenseValues.attention;
-    [_gameView.chartOpponent setPercentage:eSenseValues.attention];
+    [_gameView.chartOpponent setPercentage:100 - eSenseValues.attention];
     
     if(logEnabled) {
         output = [NSString stringWithString:temp];
